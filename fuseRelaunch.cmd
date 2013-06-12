@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -lib "simprims_ver" -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -lib "secureip" -o "D:/GitHub/ARM9byFPGA/Ch2_4tset_isim_par.exe" -prj "D:/GitHub/ARM9byFPGA/Ch2_4tset_par.prj" "work.Ch2_4tset" "work.glbl" 
