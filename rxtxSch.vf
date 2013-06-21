@@ -1,0 +1,120 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 13.2
+//  \   \         Application : sch2hdl
+//  /   /         Filename : rxtxSch.vf
+// /___/   /\     Timestamp : 06/21/2013 13:15:47
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: sch2hdl -intstyle ise -family spartan6 -verilog D:/GitHub/ARM9byFPGA/rxtxSch.vf -w D:/GitHub/ARM9byFPGA/rxtxSch.sch
+//Design Name: rxtxSch
+//Device: spartan6
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 1ns / 1ps
+
+module rxtxSch(clk, 
+               rst, 
+               rx, 
+               tx_data, 
+               tx_vld, 
+               rx_data, 
+               rx_vld, 
+               tx);
+
+    input clk;
+    input rst;
+    input rx;
+    input [7:0] tx_data;
+    input tx_vld;
+   output [7:0] rx_data;
+   output rx_vld;
+   output tx;
+   
+   wire XLXN_9;
+   wire XLXN_10;
+   wire [11:0] XLXN_22;
+   wire XLXN_26;
+   wire XLXN_268;
+   wire [3:0] XLXN_275;
+   wire XLXN_298;
+   wire XLXN_323;
+   wire [3:0] XLXN_471;
+   wire [7:0] XLXN_510;
+   wire XLXN_516;
+   
+   Rxx  XLXI_2 (.clk(clk), 
+               .rst(rst), 
+               .rx(rx), 
+               .rxx(XLXN_26));
+   RxDly  XLXI_5 (.clk(clk), 
+                 .rst(rst), 
+                 .rxx(XLXN_26), 
+                 .rx_dly(XLXN_10));
+   RxChange  XLXI_6 (.rxx(XLXN_26), 
+                    .rx_dly(XLXN_10), 
+                    .rx_change(XLXN_9));
+   RxCnt  XLXI_7 (.clk(clk), 
+                 .rst(rst), 
+                 .rx_change(XLXN_9), 
+                 .rx_cnt(XLXN_22[11:0]));
+   RxEn  XLXI_8 (.rx_cnt(XLXN_22[11:0]), 
+                .rx_en(XLXN_516));
+   RxData  XLXI_9 (.clk(clk), 
+                  .data_cnt(XLXN_275[3:0]), 
+                  .data_vld(XLXN_268), 
+                  .rst(rst), 
+                  .rxx(XLXN_26), 
+                  .rx_en(XLXN_516), 
+                  .rx_data(rx_data[7:0]));
+   DataVld  XLXI_10 (.clk(clk), 
+                    .data_cnt(XLXN_275[3:0]), 
+                    .rst(rst), 
+                    .rxx(XLXN_26), 
+                    .rx_en(XLXN_516), 
+                    .data_vld(XLXN_268));
+   DataCnt  XLXI_11 (.clk(clk), 
+                    .data_vld(XLXN_268), 
+                    .rst(rst), 
+                    .rx_en(XLXN_516), 
+                    .data_cnt(XLXN_275[3:0]));
+   RxVld  XLXI_12 (.clk(clk), 
+                  .data_cnt(XLXN_275[3:0]), 
+                  .data_vld(XLXN_268), 
+                  .rst(rst), 
+                  .rx_en(XLXN_516), 
+                  .rx_vld(rx_vld));
+   TranVld  XLXI_45 (.clk(clk), 
+                    .rst(rst), 
+                    .rx_en(XLXN_516), 
+                    .tran_cnt(XLXN_471[3:0]), 
+                    .tx_vld(tx_vld), 
+                    .tran_vld(XLXN_298));
+   TxRdyData  XLXI_46 (.clk(clk), 
+                      .rst(rst), 
+                      .txrdy(XLXN_323), 
+                      .tx_data(tx_data[7:0]), 
+                      .tx_vld(tx_vld), 
+                      .tx_rdy_data(XLXN_510[7:0]));
+   TranCnt  XLXI_49 (.clk(clk), 
+                    .rst(rst), 
+                    .rx_en(XLXN_516), 
+                    .tran_vld(XLXN_298), 
+                    .tran_cnt(XLXN_471[3:0]));
+   TxD  XLXI_56 (.clk(clk), 
+                .rst(rst), 
+                .rx_en(XLXN_516), 
+                .tran_cnt(XLXN_471[3:0]), 
+                .tran_vld(XLXN_298), 
+                .tx_rdy_data(XLXN_510[7:0]), 
+                .tx(tx));
+   TxRdy  XLXI_57 (.tran_vld(XLXN_298), 
+                  .txrdy(XLXN_323));
+endmodule

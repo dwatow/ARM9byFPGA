@@ -98,7 +98,7 @@ if (rst)
 	rx_cnt <= 12'd0;
 else
 begin
-	if (rx_change | (rx_cnt == 12'd2063) )  //14'b00_1000_0000_1111
+	if (rx_change | (rx_cnt == 12'd2603) )  //14'b00_1000_0000_1111
 		rx_cnt <= 12'd0;
 	else
 		rx_cnt <= rx_cnt + 12'd1;
@@ -108,7 +108,7 @@ endmodule
 module RxEn(rx_cnt, rx_en);
 input [11:0] rx_cnt;
 output rx_en;
-assign rx_en = (rx_cnt == 12'd1031)? 1'b1: 1'b0;
+assign rx_en = (rx_cnt == 12'd1301)? 1'b1: 1'b0;
 endmodule
 
 module DataVld(clk, rst, rxx, rx_en, data_cnt, data_vld);

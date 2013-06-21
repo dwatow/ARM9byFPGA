@@ -1,0 +1,2 @@
+xst -intstyle ise -ifn "D:/GitHub/ARM9byFPGA/rxtx.xst" -ofn "D:/GitHub/ARM9byFPGA/rxtx.syr" 
+xst -intstyle ise -ifn "D:/GitHub/ARM9byFPGA/rxtx.xst" -ofn "D:/GitHub/ARM9byFPGA/rxtx.syr" 
