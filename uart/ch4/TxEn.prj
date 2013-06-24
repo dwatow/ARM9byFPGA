@@ -1,0 +1,3 @@
+verilog work "../rxtx.v"
+verilog work "pll.v"
+verilog work "../uart_x.v"
