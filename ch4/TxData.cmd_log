@@ -1,0 +1,2 @@
+vhdtdtfi -lib work D:/GitHub/ARM9byFPGA/uart/uart_x.v -lang verilog -prj uart -o TxData.spl -module TxData -template C:/Xilinx/13.2/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e TxData.spl D:/GitHub/ARM9byFPGA/uart/TxData.sym 

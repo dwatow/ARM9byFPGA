@@ -45,7 +45,7 @@ endmodule
 //------------------------------------------------------------------------------
 module StartRising(clk, rst, txrdy, START, rx_addr, start_rising);
 	input clk, rst, txrdy, START;
-	input [`AddrWidth:0] rx_addr;
+	input [`AddrWidth-1:0] rx_addr;
 	output start_rising;
 	reg start_dly0;
 	reg start_dly1;
@@ -82,8 +82,9 @@ module TxRdyRising(clk, rst, txrdy, txrdy_rising);
 	assign txrdy_rising = ~txrdy_dly & txrdy;
 endmodule
 //------------------------------------------------------------------------------
-module TxFlag(clk, rst, tx_addr, rx_addr, start_rising, tx_flag, txrdy_rising);
-	input clk, rst, tx_addr, rx_addr, txrdy_rising, start_rising;
+module TxFlag(clk, rst, txrdy_rising, start_rising, tx_addr, rx_addr, tx_flag);
+	input clk, rst, txrdy_rising, start_rising;
+	input [`AddrWidth-1:0] tx_addr, rx_addr;
 	output tx_flag;
 	reg tx_flag;
 	//reg [`AddrWidth-1:0] tx_addr;
@@ -122,14 +123,20 @@ module RdEn(tx_flag, txrdy_rising, start_rising, rd_en);
 	assign rd_en = tx_flag ? txrdy_rising : start_rising;
 endmodule
 //------------------------------------------------------------------------------
-module RAM(clk, rd_data, rx_vld, rd_en, rx_addr, rx_data, tx_addr);
+module RAM(
+			clk, rd_en, rx_vld, 
+			rx_data, rx_addr, 
+			tx_data, tx_addr
+			);
+			
 	input clk, rd_en, rx_vld;
+	
 	input  [`DataWidth-1:0] rx_data;
 	input  [`AddrWidth-1:0] rx_addr;
 	input  [`AddrWidth-1:0] tx_addr;
-	output [`DataWidth-1:0] rd_data;
+	output [`DataWidth-1:0] tx_data;
+	
 	reg    [`DataWidth-1:0] rd_data;
-
 	reg    [`DataWidth-1:0] mem[1023:0];
 
 	always@(posedge clk)
@@ -141,6 +148,7 @@ module RAM(clk, rd_data, rx_vld, rd_en, rx_addr, rx_data, tx_addr);
 	if (rd_en)
 		rd_data <= mem[tx_addr];
 	else;
+	assign tx_data = rd_data;	
 endmodule
 //------------------------------------------------------------------------------
 module TxEn(clk, rst, rd_en, tx_en);
@@ -162,9 +170,9 @@ module TxVld(tx_en, tx_flag, tx_vld);
 endmodule
 //------------------------------------------------------------------------------
 
-module TxData(rd_data, tx_data);
-	input rd_data;
-	output tx_data;
-
-assign tx_data = rd_data;
-endmodule
+//module TxData(rd_data, tx_data);
+//	input  [`DataWidth-1:0] rd_data;
+//	output [`DataWidth-1:0] tx_data;
+//
+//assign tx_data = rd_data;
+//endmodule

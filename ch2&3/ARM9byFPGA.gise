@@ -92,6 +92,8 @@
     <transform xil_pn:end_ts="1371801234" xil_pn:in_ck="180337751252617568" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="-2289209812432176642" xil_pn:start_ts="1371801233">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="InputChanged"/>
     </transform>
     <transform xil_pn:end_ts="1371801234" xil_pn:name="TRAN_regenerateCoresSim" xil_pn:prop_ck="7755853859591676007" xil_pn:start_ts="1371801234">
       <status xil_pn:value="SuccessfullyRun"/>
@@ -100,6 +102,7 @@
     <transform xil_pn:end_ts="1371802098" xil_pn:in_ck="-6456074194989577280" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1371802098">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
       <outfile xil_pn:name="rxtx.v"/>
       <outfile xil_pn:name="rxtxAll.v"/>
       <outfile xil_pn:name="t_rxtx.v"/>
@@ -108,6 +111,7 @@
     <transform xil_pn:end_ts="1371802103" xil_pn:in_ck="-6456074194989577280" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="1746389602669235423" xil_pn:start_ts="1371802098">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
       <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="fuse.log"/>
@@ -120,6 +124,7 @@
     <transform xil_pn:end_ts="1371802103" xil_pn:in_ck="-7966705622329967464" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="-7413823083551853374" xil_pn:start_ts="1371802103">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
       <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="isim.cmd"/>
@@ -134,6 +139,7 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="InputChanged"/>
       <outfile xil_pn:name="rxtxSch.vf"/>
     </transform>
     <transform xil_pn:end_ts="1371791818" xil_pn:name="TRAN_regenerateCores" xil_pn:prop_ck="7755853859591676007" xil_pn:start_ts="1371791818">

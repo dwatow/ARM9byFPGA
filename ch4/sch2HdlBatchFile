@@ -1,0 +1,1 @@
+sch2hdl,-sympath,D:/GitHub/ARM9byFPGA/uart/ch4,-intstyle,ise,-family,spartan3e,-verilog,D:/GitHub/ARM9byFPGA/uart/ch4/uart_x_top.vf,-w,D:/GitHub/ARM9byFPGA/uart/uart_x_top.sch

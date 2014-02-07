@@ -1,0 +1,5 @@
+xst -intstyle ise -ifn "D:/GitHub/ARM9byFPGA/uart/ch4/TxVld.xst" -ofn "D:/GitHub/ARM9byFPGA/uart/ch4/TxVld.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s500e-fg320-4 TxVld.ngc TxVld.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o TxVld_map.ncd TxVld.ngd TxVld.pcf 
+par -w -intstyle ise -ol high -t 1 TxVld_map.ncd TxVld.ncd TxVld.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml TxVld.twx TxVld.ncd -o TxVld.twr TxVld.pcf 

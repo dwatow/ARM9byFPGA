@@ -1,0 +1,2 @@
+vhdtdtfi -lib work D:/GitHub/ARM9byFPGA/uart/uart_x.v -lang verilog -prj uart -o RAM.spl -module RAM -template C:/Xilinx/13.2/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e RAM.spl D:/GitHub/ARM9byFPGA/uart/RAM.sym 

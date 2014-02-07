@@ -1,0 +1,2 @@
+xst -intstyle ise -ifn "D:/GitHub/ARM9byFPGA/uart/ch4/uart_x_top.xst" -ofn "D:/GitHub/ARM9byFPGA/uart/ch4/uart_x_top.syr" 
+xst -intstyle ise -ifn "D:/GitHub/ARM9byFPGA/uart/ch4/uart_x_top.xst" -ofn "D:/GitHub/ARM9byFPGA/uart/ch4/uart_x_top.syr" 

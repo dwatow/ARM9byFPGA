@@ -1,0 +1,12 @@
+[Inputs]
+clk
+rst
+txrdy
+START
+=rx_addr[9:0]=
+[Outputs]
+start_rising
+[BiDir]
+[ATTRIBUTES]
+VeriModel StartRising
+

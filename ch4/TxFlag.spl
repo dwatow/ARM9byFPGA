@@ -1,0 +1,13 @@
+[Inputs]
+clk
+rst
+txrdy_rising
+start_rising
+=tx_addr[9:0]=
+=rx_addr[9:0]=
+[Outputs]
+tx_flag
+[BiDir]
+[ATTRIBUTES]
+VeriModel TxFlag
+

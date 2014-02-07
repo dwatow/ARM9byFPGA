@@ -1,0 +1,108 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 13.2
+//  \   \         Application : sch2hdl
+//  /   /         Filename : uart_x_top.vf
+// /___/   /\     Timestamp : 06/25/2013 10:29:04
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: sch2hdl -sympath D:/GitHub/ARM9byFPGA/uart/ch4 -intstyle ise -family spartan3e -verilog D:/GitHub/ARM9byFPGA/uart/ch4/uart_x_top.vf -w D:/GitHub/ARM9byFPGA/uart/uart_x_top.sch
+//Design Name: uart_x_top
+//Device: spartan3e
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 1ns / 1ps
+
+module uart_x_top(CLOCK_50, 
+                  KEY, 
+                  RxD, 
+                  START, 
+                  TxD);
+
+    input CLOCK_50;
+    input KEY;
+    input RxD;
+    input START;
+   output TxD;
+   
+   wire [9:0] XLXN_1;
+   wire XLXN_12;
+   wire XLXN_41;
+   wire XLXN_58;
+   wire XLXN_80;
+   wire XLXN_81;
+   wire XLXN_85;
+   wire XLXN_87;
+   wire XLXN_88;
+   wire [9:0] XLXN_94;
+   wire [7:0] XLXN_100;
+   wire XLXN_102;
+   wire [7:0] XLXN_108;
+   
+   RxAddr  XLXI_6 (.clk(XLXN_58), 
+                  .rst(KEY), 
+                  .rx_vld(XLXN_12), 
+                  .rx_addr(XLXN_1[9:0]));
+   RAM  XLXI_7 (.clk(XLXN_58), 
+               .rd_en(XLXN_87), 
+               .rx_addr(XLXN_1[9:0]), 
+               .rx_data(XLXN_100[7:0]), 
+               .rx_vld(XLXN_12), 
+               .tx_addr(XLXN_94[9:0]), 
+               .tx_data(XLXN_108[7:0]));
+   TxRdyRising  XLXI_8 (.clk(XLXN_58), 
+                       .rst(KEY), 
+                       .txrdy(XLXN_41), 
+                       .txrdy_rising(XLXN_80));
+   TxAddr  XLXI_10 (.clk(XLXN_58), 
+                   .rst(KEY), 
+                   .start_rising(XLXN_81), 
+                   .txrdy_rising(XLXN_80), 
+                   .tx_flag(XLXN_85), 
+                   .tx_addr(XLXN_94[9:0]));
+   TxEn  XLXI_11 (.clk(XLXN_58), 
+                 .rd_en(XLXN_87), 
+                 .rst(KEY), 
+                 .tx_en(XLXN_88));
+   RdEn  XLXI_25 (.start_rising(XLXN_81), 
+                 .txrdy_rising(XLXN_80), 
+                 .tx_flag(XLXN_85), 
+                 .rd_en(XLXN_87));
+   TxVld  XLXI_27 (.tx_en(XLXN_88), 
+                  .tx_flag(XLXN_85), 
+                  .tx_vld(XLXN_102));
+   pll  XLXI_28 (.CLKIN_IN(CLOCK_50), 
+                .RST_IN(KEY), 
+                .CLKDV_OUT(XLXN_58), 
+                .CLKIN_IBUFG_OUT(), 
+                .CLK0_OUT());
+   rxtx  XLXI_29 (.clk(XLXN_58), 
+                 .rst(KEY), 
+                 .rx(RxD), 
+                 .tx_data(XLXN_108[7:0]), 
+                 .tx_vld(XLXN_102), 
+                 .rx_data(XLXN_100[7:0]), 
+                 .rx_vld(XLXN_12), 
+                 .tx(TxD), 
+                 .txrdy(XLXN_41));
+   TxFlag  XLXI_59 (.clk(XLXN_58), 
+                   .rst(KEY), 
+                   .rx_addr(XLXN_1[9:0]), 
+                   .start_rising(XLXN_81), 
+                   .txrdy_rising(XLXN_80), 
+                   .tx_addr(XLXN_94[9:0]), 
+                   .tx_flag(XLXN_85));
+   StartRising  XLXI_60 (.clk(XLXN_58), 
+                        .rst(KEY), 
+                        .rx_addr(XLXN_1[9:0]), 
+                        .START(START), 
+                        .txrdy(XLXN_41), 
+                        .start_rising(XLXN_81));
+endmodule

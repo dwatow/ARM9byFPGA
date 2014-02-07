@@ -1,0 +1,63 @@
+Release 13.2 - xst O.61xd (nt)
+Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to D:/GitHub/ARM9byFPGA/uart/ch4/xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.66 secs
+ 
+--> Parameter xsthdpdir set to D:/GitHub/ARM9byFPGA/uart/ch4/xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.66 secs
+ 
+--> WARNING:Xst:3164 - Option "-debug" found multiple times in the command line. Only the first occurence is considered.
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling verilog file "../rxtx.v" in library work
+Module <rxtx> compiled
+Module <Rxx> compiled
+Module <RxDly> compiled
+Module <RxChange> compiled
+Module <RxCnt> compiled
+Module <RxEn> compiled
+Module <DataVld> compiled
+Module <DataCnt> compiled
+Module <RxData> compiled
+Module <RxVld> compiled
+Module <TxRdyData> compiled
+Module <TranVld> compiled
+Module <TranCnt> compiled
+Module <TxD> compiled
+Compiling verilog file "../uart_x.v" in library work
+Module <TxRdy> compiled
+Module <uart_x> compiled
+Module <RxAddr> compiled
+Module <StartRising> compiled
+Module <TxRdyRising> compiled
+Module <TxFlag> compiled
+Module <TxAddr> compiled
+Module <RdEn> compiled
+Module <RAM> compiled
+Module <TxEn> compiled
+Module <TxVld> compiled
+Module <TxData> compiled
+No errors in compilation
+Analysis of file <"TxFlag.prj"> succeeded.
+ 
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.86 secs
+ 
+--> 
+
+Total memory usage is 124884 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    1 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+

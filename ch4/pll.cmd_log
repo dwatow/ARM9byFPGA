@@ -1,0 +1,2 @@
+xaw2spl {-intstyle ise} D:/GitHub/ARM9byFPGA/uart/ipcore_dir/pll.xaw 
+spl2sym -intstyle ise -family spartan3e pll.spl D:/GitHub/ARM9byFPGA/uart/pll.sym 

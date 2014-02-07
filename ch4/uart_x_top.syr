@@ -1,0 +1,823 @@
+Release 13.2 - xst O.61xd (nt)
+Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.72 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.72 secs
+ 
+--> Reading design: uart_x_top.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "uart_x_top.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "uart_x_top"
+Output Format                      : NGC
+Target Device                      : xc3s500e-4-fg320
+
+---- Source Options
+Top Module Name                    : uart_x_top
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 500
+Add Generic Clock Buffer(BUFG)     : 24
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling verilog file "../rxtx.v" in library work
+Module <rxtx> compiled
+Module <Rxx> compiled
+Module <RxDly> compiled
+Module <RxChange> compiled
+Module <RxCnt> compiled
+Module <RxEn> compiled
+Module <DataVld> compiled
+Module <DataCnt> compiled
+Module <RxData> compiled
+Module <RxVld> compiled
+Module <TxRdyData> compiled
+Module <TranVld> compiled
+Module <TranCnt> compiled
+Module <TxD> compiled
+Compiling verilog file "pll.v" in library work
+Module <TxRdy> compiled
+Compiling verilog file "../uart_x.v" in library work
+Module <pll> compiled
+Module <uart_x> compiled
+Module <RxAddr> compiled
+Module <StartRising> compiled
+Module <TxRdyRising> compiled
+Module <TxFlag> compiled
+Module <TxAddr> compiled
+Module <RdEn> compiled
+Module <RAM> compiled
+Module <TxEn> compiled
+Compiling verilog file "uart_x_top.vf" in library work
+Module <TxVld> compiled
+Module <uart_x_top> compiled
+No errors in compilation
+Analysis of file <"uart_x_top.prj"> succeeded.
+ 
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for module <uart_x_top> in library <work>.
+
+Analyzing hierarchy for module <RxAddr> in library <work>.
+
+Analyzing hierarchy for module <RAM> in library <work>.
+
+Analyzing hierarchy for module <TxRdyRising> in library <work>.
+
+Analyzing hierarchy for module <TxAddr> in library <work>.
+
+Analyzing hierarchy for module <TxEn> in library <work>.
+
+Analyzing hierarchy for module <RdEn> in library <work>.
+
+Analyzing hierarchy for module <TxVld> in library <work>.
+
+Analyzing hierarchy for module <pll> in library <work>.
+
+Analyzing hierarchy for module <rxtx> in library <work>.
+
+Analyzing hierarchy for module <TxFlag> in library <work>.
+
+Analyzing hierarchy for module <StartRising> in library <work>.
+
+Analyzing hierarchy for module <Rxx> in library <work>.
+
+Analyzing hierarchy for module <RxDly> in library <work>.
+
+Analyzing hierarchy for module <RxChange> in library <work>.
+
+Analyzing hierarchy for module <RxCnt> in library <work>.
+
+Analyzing hierarchy for module <RxEn> in library <work>.
+
+Analyzing hierarchy for module <DataVld> in library <work>.
+
+Analyzing hierarchy for module <DataCnt> in library <work>.
+
+Analyzing hierarchy for module <RxData> in library <work>.
+
+Analyzing hierarchy for module <RxVld> in library <work>.
+
+Analyzing hierarchy for module <TxRdyData> in library <work>.
+
+Analyzing hierarchy for module <TranVld> in library <work>.
+
+Analyzing hierarchy for module <TranCnt> in library <work>.
+
+Analyzing hierarchy for module <TxD> in library <work>.
+
+Analyzing hierarchy for module <TxRdy> in library <work>.
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing top module <uart_x_top>.
+Module <uart_x_top> is correct for synthesis.
+ 
+Analyzing module <RxAddr> in library <work>.
+Module <RxAddr> is correct for synthesis.
+ 
+Analyzing module <RAM> in library <work>.
+Module <RAM> is correct for synthesis.
+ 
+Analyzing module <TxRdyRising> in library <work>.
+Module <TxRdyRising> is correct for synthesis.
+ 
+Analyzing module <TxAddr> in library <work>.
+Module <TxAddr> is correct for synthesis.
+ 
+Analyzing module <TxEn> in library <work>.
+Module <TxEn> is correct for synthesis.
+ 
+Analyzing module <RdEn> in library <work>.
+Module <RdEn> is correct for synthesis.
+ 
+Analyzing module <TxVld> in library <work>.
+Module <TxVld> is correct for synthesis.
+ 
+Analyzing module <pll> in library <work>.
+Module <pll> is correct for synthesis.
+ 
+    Set user-defined property "CAPACITANCE =  DONT_CARE" for instance <CLKIN_IBUFG_INST> in unit <pll>.
+    Set user-defined property "IBUF_DELAY_VALUE =  0" for instance <CLKIN_IBUFG_INST> in unit <pll>.
+    Set user-defined property "IBUF_LOW_PWR =  TRUE" for instance <CLKIN_IBUFG_INST> in unit <pll>.
+    Set user-defined property "IOSTANDARD =  DEFAULT" for instance <CLKIN_IBUFG_INST> in unit <pll>.
+    Set user-defined property "CLKDV_DIVIDE =  2.000000" for instance <DCM_SP_INST> in unit <pll>.
+    Set user-defined property "CLKFX_DIVIDE =  1" for instance <DCM_SP_INST> in unit <pll>.
+    Set user-defined property "CLKFX_MULTIPLY =  4" for instance <DCM_SP_INST> in unit <pll>.
+    Set user-defined property "CLKIN_DIVIDE_BY_2 =  FALSE" for instance <DCM_SP_INST> in unit <pll>.
+    Set user-defined property "CLKIN_PERIOD =  20.000000" for instance <DCM_SP_INST> in unit <pll>.
+    Set user-defined property "CLKOUT_PHASE_SHIFT =  NONE" for instance <DCM_SP_INST> in unit <pll>.
+    Set user-defined property "CLK_FEEDBACK =  1X" for instance <DCM_SP_INST> in unit <pll>.
+    Set user-defined property "DESKEW_ADJUST =  SYSTEM_SYNCHRONOUS" for instance <DCM_SP_INST> in unit <pll>.
+    Set user-defined property "DFS_FREQUENCY_MODE =  LOW" for instance <DCM_SP_INST> in unit <pll>.
+    Set user-defined property "DLL_FREQUENCY_MODE =  LOW" for instance <DCM_SP_INST> in unit <pll>.
+    Set user-defined property "DSS_MODE =  NONE" for instance <DCM_SP_INST> in unit <pll>.
+    Set user-defined property "DUTY_CYCLE_CORRECTION =  TRUE" for instance <DCM_SP_INST> in unit <pll>.
+    Set user-defined property "FACTORY_JF =  C080" for instance <DCM_SP_INST> in unit <pll>.
+    Set user-defined property "PHASE_SHIFT =  0" for instance <DCM_SP_INST> in unit <pll>.
+    Set user-defined property "STARTUP_WAIT =  FALSE" for instance <DCM_SP_INST> in unit <pll>.
+Analyzing module <rxtx> in library <work>.
+Module <rxtx> is correct for synthesis.
+ 
+Analyzing module <Rxx> in library <work>.
+Module <Rxx> is correct for synthesis.
+ 
+Analyzing module <RxDly> in library <work>.
+Module <RxDly> is correct for synthesis.
+ 
+Analyzing module <RxChange> in library <work>.
+Module <RxChange> is correct for synthesis.
+ 
+Analyzing module <RxCnt> in library <work>.
+Module <RxCnt> is correct for synthesis.
+ 
+Analyzing module <RxEn> in library <work>.
+Module <RxEn> is correct for synthesis.
+ 
+Analyzing module <DataVld> in library <work>.
+Module <DataVld> is correct for synthesis.
+ 
+Analyzing module <DataCnt> in library <work>.
+Module <DataCnt> is correct for synthesis.
+ 
+Analyzing module <RxData> in library <work>.
+Module <RxData> is correct for synthesis.
+ 
+Analyzing module <RxVld> in library <work>.
+Module <RxVld> is correct for synthesis.
+ 
+Analyzing module <TxRdyData> in library <work>.
+Module <TxRdyData> is correct for synthesis.
+ 
+Analyzing module <TranVld> in library <work>.
+Module <TranVld> is correct for synthesis.
+ 
+Analyzing module <TranCnt> in library <work>.
+Module <TranCnt> is correct for synthesis.
+ 
+Analyzing module <TxD> in library <work>.
+Module <TxD> is correct for synthesis.
+ 
+Analyzing module <TxRdy> in library <work>.
+Module <TxRdy> is correct for synthesis.
+ 
+Analyzing module <TxFlag> in library <work>.
+Module <TxFlag> is correct for synthesis.
+ 
+Analyzing module <StartRising> in library <work>.
+Module <StartRising> is correct for synthesis.
+ 
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <RxAddr>.
+    Related source file is "../uart_x.v".
+    Found 10-bit up counter for signal <rx_addr>.
+    Summary:
+	inferred   1 Counter(s).
+Unit <RxAddr> synthesized.
+
+
+Synthesizing Unit <RAM>.
+    Related source file is "../uart_x.v".
+    Found 1024x8-bit dual-port RAM <Mram_mem> for signal <mem>.
+    Found 8-bit register for signal <rd_data>.
+    Summary:
+	inferred   1 RAM(s).
+	inferred   8 D-type flip-flop(s).
+Unit <RAM> synthesized.
+
+
+Synthesizing Unit <TxRdyRising>.
+    Related source file is "../uart_x.v".
+    Found 1-bit register for signal <txrdy_dly>.
+    Summary:
+	inferred   1 D-type flip-flop(s).
+Unit <TxRdyRising> synthesized.
+
+
+Synthesizing Unit <TxAddr>.
+    Related source file is "../uart_x.v".
+    Found 10-bit register for signal <tx_addr>.
+    Found 10-bit adder for signal <tx_addr$addsub0000> created at line 113.
+    Summary:
+	inferred  10 D-type flip-flop(s).
+	inferred   1 Adder/Subtractor(s).
+Unit <TxAddr> synthesized.
+
+
+Synthesizing Unit <TxEn>.
+    Related source file is "../uart_x.v".
+    Found 1-bit register for signal <tx_en>.
+    Summary:
+	inferred   1 D-type flip-flop(s).
+Unit <TxEn> synthesized.
+
+
+Synthesizing Unit <RdEn>.
+    Related source file is "../uart_x.v".
+Unit <RdEn> synthesized.
+
+
+Synthesizing Unit <TxVld>.
+    Related source file is "../uart_x.v".
+Unit <TxVld> synthesized.
+
+
+Synthesizing Unit <TxFlag>.
+    Related source file is "../uart_x.v".
+    Found 1-bit register for signal <tx_flag>.
+    Found 10-bit comparator equal for signal <tx_flag$cmp_eq0000> created at line 96.
+    Summary:
+	inferred   1 D-type flip-flop(s).
+	inferred   1 Comparator(s).
+Unit <TxFlag> synthesized.
+
+
+Synthesizing Unit <StartRising>.
+    Related source file is "../uart_x.v".
+    Found 1-bit register for signal <start_dly0>.
+    Found 1-bit register for signal <start_dly1>.
+    Found 1-bit register for signal <start_ok>.
+    Summary:
+	inferred   3 D-type flip-flop(s).
+Unit <StartRising> synthesized.
+
+
+Synthesizing Unit <Rxx>.
+    Related source file is "../rxtx.v".
+    Found 1-bit register for signal <rxx>.
+    Found 1-bit register for signal <rx1>.
+    Found 1-bit register for signal <rx2>.
+    Found 1-bit register for signal <rx3>.
+    Summary:
+	inferred   4 D-type flip-flop(s).
+Unit <Rxx> synthesized.
+
+
+Synthesizing Unit <RxDly>.
+    Related source file is "../rxtx.v".
+    Found 1-bit register for signal <rx_dly>.
+    Summary:
+	inferred   1 D-type flip-flop(s).
+Unit <RxDly> synthesized.
+
+
+Synthesizing Unit <RxChange>.
+    Related source file is "../rxtx.v".
+    Found 1-bit xor2 for signal <rx_change>.
+Unit <RxChange> synthesized.
+
+
+Synthesizing Unit <RxCnt>.
+    Related source file is "../rxtx.v".
+    Found 12-bit up counter for signal <rx_cnt>.
+    Summary:
+	inferred   1 Counter(s).
+Unit <RxCnt> synthesized.
+
+
+Synthesizing Unit <RxEn>.
+    Related source file is "../rxtx.v".
+Unit <RxEn> synthesized.
+
+
+Synthesizing Unit <DataVld>.
+    Related source file is "../rxtx.v".
+    Found 1-bit register for signal <data_vld>.
+    Summary:
+	inferred   1 D-type flip-flop(s).
+Unit <DataVld> synthesized.
+
+
+Synthesizing Unit <DataCnt>.
+    Related source file is "../rxtx.v".
+    Found 4-bit register for signal <data_cnt>.
+    Found 4-bit adder for signal <data_cnt$addsub0000> created at line 138.
+    Summary:
+	inferred   4 D-type flip-flop(s).
+	inferred   1 Adder/Subtractor(s).
+Unit <DataCnt> synthesized.
+
+
+Synthesizing Unit <RxData>.
+    Related source file is "../rxtx.v".
+WARNING:Xst:647 - Input <data_cnt<2:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 8-bit register for signal <rx_data>.
+    Summary:
+	inferred   8 D-type flip-flop(s).
+Unit <RxData> synthesized.
+
+
+Synthesizing Unit <RxVld>.
+    Related source file is "../rxtx.v".
+    Found 1-bit register for signal <rx_vld>.
+    Summary:
+	inferred   1 D-type flip-flop(s).
+Unit <RxVld> synthesized.
+
+
+Synthesizing Unit <TxRdyData>.
+    Related source file is "../rxtx.v".
+    Found 8-bit register for signal <tx_rdy_data>.
+    Summary:
+	inferred   8 D-type flip-flop(s).
+Unit <TxRdyData> synthesized.
+
+
+Synthesizing Unit <TranVld>.
+    Related source file is "../rxtx.v".
+    Found 1-bit register for signal <tran_vld>.
+    Summary:
+	inferred   1 D-type flip-flop(s).
+Unit <TranVld> synthesized.
+
+
+Synthesizing Unit <TranCnt>.
+    Related source file is "../rxtx.v".
+    Found 4-bit register for signal <tran_cnt>.
+    Found 4-bit adder for signal <tran_cnt$addsub0000> created at line 206.
+    Summary:
+	inferred   4 D-type flip-flop(s).
+	inferred   1 Adder/Subtractor(s).
+Unit <TranCnt> synthesized.
+
+
+Synthesizing Unit <TxD>.
+    Related source file is "../rxtx.v".
+    Found 1-bit register for signal <tx>.
+    Found 1-bit xor8 for signal <tx$xor0000> created at line 233.
+    Summary:
+	inferred   1 D-type flip-flop(s).
+	inferred   1 Xor(s).
+Unit <TxD> synthesized.
+
+
+Synthesizing Unit <TxRdy>.
+    Related source file is "../rxtx.v".
+Unit <TxRdy> synthesized.
+
+
+Synthesizing Unit <pll>.
+    Related source file is "pll.v".
+Unit <pll> synthesized.
+
+
+Synthesizing Unit <rxtx>.
+    Related source file is "../rxtx.v".
+Unit <rxtx> synthesized.
+
+
+Synthesizing Unit <uart_x_top>.
+    Related source file is "uart_x_top.vf".
+Unit <uart_x_top> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 1
+ 1024x8-bit dual-port RAM                              : 1
+# Adders/Subtractors                                   : 3
+ 10-bit adder                                          : 1
+ 4-bit adder                                           : 2
+# Counters                                             : 2
+ 10-bit up counter                                     : 1
+ 12-bit up counter                                     : 1
+# Registers                                            : 21
+ 1-bit register                                        : 15
+ 10-bit register                                       : 1
+ 4-bit register                                        : 2
+ 8-bit register                                        : 3
+# Comparators                                          : 1
+ 10-bit comparator equal                               : 1
+# Xors                                                 : 2
+ 1-bit xor2                                            : 1
+ 1-bit xor8                                            : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+Synthesizing (advanced) Unit <RAM>.
+INFO:Xst:3226 - The RAM <Mram_mem> will be implemented as a BLOCK RAM, absorbing the following register(s): <rd_data>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 1024-word x 8-bit                   |          |
+    |     mode           | read-first                          |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     weA            | connected to signal <rx_vld>        | high     |
+    |     addrA          | connected to signal <rx_addr>       |          |
+    |     diA            | connected to signal <rx_data>       |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+    | Port B                                                              |
+    |     aspect ratio   | 1024-word x 8-bit                   |          |
+    |     mode           | write-first                         |          |
+    |     clkB           | connected to signal <clk>           | rise     |
+    |     enB            | connected to signal <rd_en>         | high     |
+    |     addrB          | connected to signal <tx_addr>       |          |
+    |     doB            | connected to signal <rd_data>       |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+Unit <RAM> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 1
+ 1024x8-bit dual-port block RAM                        : 1
+# Adders/Subtractors                                   : 3
+ 10-bit adder                                          : 1
+ 4-bit adder                                           : 2
+# Counters                                             : 2
+ 10-bit up counter                                     : 1
+ 12-bit up counter                                     : 1
+# Registers                                            : 49
+ Flip-Flops                                            : 49
+# Comparators                                          : 1
+ 10-bit comparator equal                               : 1
+# Xors                                                 : 2
+ 1-bit xor2                                            : 1
+ 1-bit xor8                                            : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <uart_x_top> ...
+
+Optimizing unit <TxAddr> ...
+
+Optimizing unit <DataCnt> ...
+
+Optimizing unit <RxData> ...
+
+Optimizing unit <TxRdyData> ...
+
+Optimizing unit <TranCnt> ...
+
+Optimizing unit <rxtx> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block uart_x_top, actual ratio is 1.
+
+Final Macro Processing ...
+
+Processing Unit <uart_x_top> :
+	Found 4-bit shift register for signal <XLXI_29/U1/rxx>.
+Unit <uart_x_top> processed.
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 67
+ Flip-Flops                                            : 67
+# Shift Registers                                      : 1
+ 4-bit shift register                                  : 1
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : uart_x_top.ngr
+Top Level Output File Name         : uart_x_top
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 5
+
+Cell Usage :
+# BELS                             : 184
+#      GND                         : 1
+#      INV                         : 4
+#      LUT1                        : 29
+#      LUT2                        : 23
+#      LUT2_D                      : 1
+#      LUT3                        : 11
+#      LUT3_D                      : 1
+#      LUT3_L                      : 2
+#      LUT4                        : 40
+#      LUT4_D                      : 3
+#      LUT4_L                      : 1
+#      MUXCY                       : 34
+#      MUXF5                       : 1
+#      VCC                         : 1
+#      XORCY                       : 32
+# FlipFlops/Latches                : 72
+#      FD                          : 1
+#      FDC                         : 22
+#      FDCE                        : 47
+#      FDP                         : 1
+#      FDPE                        : 1
+# RAMS                             : 1
+#      RAMB16_S9_S9                : 1
+# Shift Registers                  : 1
+#      SRL16                       : 1
+# Clock Buffers                    : 2
+#      BUFG                        : 2
+# IO Buffers                       : 5
+#      IBUF                        : 3
+#      IBUFG                       : 1
+#      OBUF                        : 1
+# DCMs                             : 1
+#      DCM_SP                      : 1
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s500efg320-4 
+
+ Number of Slices:                       65  out of   4656     1%  
+ Number of Slice Flip Flops:             72  out of   9312     0%  
+ Number of 4 input LUTs:                116  out of   9312     1%  
+    Number used as logic:               115
+    Number used as Shift registers:       1
+ Number of IOs:                           5
+ Number of bonded IOBs:                   5  out of    232     2%  
+ Number of BRAMs:                         1  out of     20     5%  
+ Number of GCLKs:                         2  out of     24     8%  
+ Number of DCMs:                          1  out of      4    25%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+--------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)    | Load  |
+-----------------------------------+--------------------------+-------+
+CLOCK_50                           | XLXI_28/DCM_SP_INST:CLKDV| 74    |
+-----------------------------------+--------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+-----------------------------------+------------------------+-------+
+Control Signal                     | Buffer(FF name)        | Load  |
+-----------------------------------+------------------------+-------+
+KEY                                | IBUF                   | 71    |
+-----------------------------------+------------------------+-------+
+
+Timing Summary:
+---------------
+Speed Grade: -4
+
+   Minimum period: 2.934ns (Maximum Frequency: 340.832MHz)
+   Minimum input arrival time before clock: 2.059ns
+   Maximum output required time after clock: 4.283ns
+   Maximum combinational path delay: No path found
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'CLOCK_50'
+  Clock period: 2.934ns (frequency: 340.832MHz)
+  Total number of paths / destination ports: 942 / 148
+-------------------------------------------------------------------------
+Delay:               5.868ns (Levels of Logic = 3)
+  Source:            XLXI_6/rx_addr_4 (FF)
+  Destination:       XLXI_7/Mram_mem (RAM)
+  Source Clock:      CLOCK_50 rising 0.5X
+  Destination Clock: CLOCK_50 rising 0.5X
+
+  Data Path: XLXI_6/rx_addr_4 to XLXI_7/Mram_mem
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q             4   0.591   0.762  XLXI_6/rx_addr_4 (XLXI_6/rx_addr_4)
+     LUT4:I0->O            1   0.704   0.595  XLXI_60/start_rising10 (XLXI_60/start_rising10)
+     LUT4:I0->O            4   0.704   0.591  XLXI_60/start_rising35 (XLXN_81)
+     LUT4:I3->O            2   0.704   0.447  XLXI_25/rd_en1 (XLXN_87)
+     RAMB16_S9_S9:ENB          0.770          XLXI_7/Mram_mem
+    ----------------------------------------
+    Total                      5.868ns (3.473ns logic, 2.395ns route)
+                                       (59.2% logic, 40.8% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'CLOCK_50'
+  Total number of paths / destination ports: 2 / 2
+-------------------------------------------------------------------------
+Offset:              2.059ns (Levels of Logic = 1)
+  Source:            RxD (PAD)
+  Destination:       XLXI_29/U1/Mshreg_rxx (FF)
+  Destination Clock: CLOCK_50 rising 0.5X
+
+  Data Path: RxD to XLXI_29/U1/Mshreg_rxx
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             1   1.218   0.420  RxD_IBUF (RxD_IBUF)
+     SRL16:D                   0.421          XLXI_29/U1/Mshreg_rxx
+    ----------------------------------------
+    Total                      2.059ns (1.639ns logic, 0.420ns route)
+                                       (79.6% logic, 20.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'CLOCK_50'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              4.283ns (Levels of Logic = 1)
+  Source:            XLXI_29/U13/tx (FF)
+  Destination:       TxD (PAD)
+  Source Clock:      CLOCK_50 rising 0.5X
+
+  Data Path: XLXI_29/U13/tx to TxD
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDPE:C->Q             1   0.591   0.420  XLXI_29/U13/tx (XLXI_29/U13/tx)
+     OBUF:I->O                 3.272          TxD_OBUF (TxD)
+    ----------------------------------------
+    Total                      4.283ns (3.863ns logic, 0.420ns route)
+                                       (90.2% logic, 9.8% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 10.00 secs
+Total CPU time to Xst completion: 9.55 secs
+ 
+--> 
+
+Total memory usage is 203264 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    1 (   0 filtered)
+Number of infos    :    1 (   0 filtered)
+

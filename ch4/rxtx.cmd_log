@@ -1,0 +1,2 @@
+vhdtdtfi -lib work D:/GitHub/ARM9byFPGA/uart/rxtx.v -lang verilog -prj uart -o rxtx.spl -module rxtx -template C:/Xilinx/13.2/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e rxtx.spl D:/GitHub/ARM9byFPGA/uart/rxtx.sym 

@@ -1,0 +1,4 @@
+vhdtdtfi -lib work D:/GitHub/ARM9byFPGA/uart/uart_x.v -lang verilog -prj uart -o StartRising.spl -module StartRising -template C:/Xilinx/13.2/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e StartRising.spl D:/GitHub/ARM9byFPGA/uart/StartRising.sym 
+vhdtdtfi -lib work D:/GitHub/ARM9byFPGA/uart/uart_x.v -lang verilog -prj uart -o StartRising.spl -module StartRising -template C:/Xilinx/13.2/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e StartRising.spl D:/GitHub/ARM9byFPGA/uart/StartRising.sym 

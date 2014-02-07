@@ -1,0 +1,7 @@
+vhdtdtfi -lib work D:/GitHub/ARM9byFPGA/uart/uart_x.v -lang verilog -prj uart -o TxFlag.spl -module TxFlag -template C:/Xilinx/13.2/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e TxFlag.spl D:/GitHub/ARM9byFPGA/uart/TxFlag.sym 
+vhdtdtfi -lang verilog -prj uart -o D:/GitHub/ARM9byFPGA/uart/ch4/TxFlag.tfi -lib work D:/GitHub/ARM9byFPGA/uart//uart_x.v -module TxFlag -template C:/Xilinx/13.2/ISE_DS/ISE//data/tfi.tft -deleteonerror 
+vhdtdtfi -lib work D:/GitHub/ARM9byFPGA/uart/uart_x.v -lang verilog -prj uart -o TxFlag.spl -module TxFlag -template C:/Xilinx/13.2/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e TxFlag.spl D:/GitHub/ARM9byFPGA/uart/TxFlag.sym 
+vhdtdtfi -lib work D:/GitHub/ARM9byFPGA/uart/uart_x.v -lang verilog -prj uart -o TxFlag.spl -module TxFlag -template C:/Xilinx/13.2/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e TxFlag.spl D:/GitHub/ARM9byFPGA/uart/TxFlag.sym 

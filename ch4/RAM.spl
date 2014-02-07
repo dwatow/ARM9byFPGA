@@ -1,0 +1,13 @@
+[Inputs]
+clk
+rd_en
+rx_vld
+=rx_data[7:0]=
+=rx_addr[9:0]=
+=tx_addr[9:0]=
+[Outputs]
+=tx_data[7:0]=
+[BiDir]
+[ATTRIBUTES]
+VeriModel RAM
+
